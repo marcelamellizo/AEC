@@ -18,6 +18,7 @@
                 <span class="text-sm font-bold text-slate-800 whitespace-nowrap">Aso Enlace Comunitario</span>
             </a>
             <nav class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#loma-verde" class="hover:text-blue-500 transition-colors">Loma Verde</a>
                 <a href="#quienes-somos" class="hover:text-blue-500 transition-colors">Quiénes Somos</a>
                 <a href="#propuesta" class="hover:text-blue-500 transition-colors">Propuesta de Valor</a>
                 <a href="#proyectos" class="hover:text-blue-500 transition-colors">Proyectos</a>
@@ -139,10 +140,137 @@
 
             <!-- Scroll down indicator -->
             <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:block">
-                <a href="#quienes-somos" class="scroll-btn opacity-60 hover:opacity-100 transition-opacity flex flex-col items-center gap-2" data-target="#quienes-somos">
+                <a href="#loma-verde" class="scroll-btn opacity-60 hover:opacity-100 transition-opacity flex flex-col items-center gap-2" data-target="#loma-verde">
                     <span class="text-xs font-semibold tracking-widest uppercase text-white/80">Scroll</span>
                     <i class="fa-solid fa-chevron-down text-white animate-bounce"></i>
                 </a>
+            </div>
+        </section>
+
+        <!-- Proyecto Loma Verde Section -->
+        <section id="loma-verde" class="py-20 px-6 relative z-10 bg-gradient-to-b from-slate-900 via-sky-950 to-slate-900 text-white overflow-hidden">
+            <!-- Decorative background elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-12 scroll-animate">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs md:text-sm font-semibold tracking-wider uppercase mb-3">
+                        <i class="fa-solid fa-tree mr-1.5"></i> Proyecto Destacado
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                        Proyecto <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-400">Loma Verde</span>
+                    </h2>
+                    <p class="text-sky-100/80 max-w-2xl mx-auto text-base md:text-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-location-dot text-rose-400"></i>
+                        <span>Rimbio, Cauca &bull; Vivienda Rural Productiva</span>
+                    </p>
+                </div>
+
+                <!-- Main Grid: Carousel & Info Cards -->
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+
+                    <!-- Carousel Container (Media Gallery) -->
+                    <div class="lg:col-span-7 w-full scroll-animate">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-slate-900 group aspect-[16/10] md:aspect-[16/9]">
+                            <!-- Carousel Slides track -->
+                            <div id="loma-verde-carousel" class="flex transition-transform duration-500 ease-in-out h-full w-full">
+
+                                <!-- Slide 1: Image -->
+                                <div class="w-full h-full flex-shrink-0 relative bg-slate-900 flex items-center justify-center">
+                                    <img src="https://asoconstructora.com/wp-content/uploads/2026/10/lomaverde-PM.jpeg" alt="Proyecto Loma Verde - Plan Maestro" class="w-full h-full object-contain md:object-cover">
+                                    <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 text-xs font-medium text-white/90 flex items-center gap-2">
+                                        <i class="fa-solid fa-image text-emerald-400"></i> Plan Maestro Loma Verde
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2: Video -->
+                                <div class="w-full h-full flex-shrink-0 relative bg-slate-950 flex items-center justify-center">
+                                    <video controls playsinline class="w-full h-full object-contain">
+                                        <source src="https://asoconstructora.com/wp-content/uploads/2026/10/videoAEC.mp4" type="video/mp4">
+                                        Tu navegador no soporta el reproductor de video.
+                                    </video>
+                                    <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 text-xs font-medium text-white/90 flex items-center gap-2 pointer-events-none">
+                                        <i class="fa-solid fa-circle-play text-sky-400"></i> Video Recorrido AEC
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Carousel Controls -->
+                            <button id="lv-prev" aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 bg-slate-900/60 hover:bg-slate-900/90 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 shadow-lg transition-all z-20">
+                                <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
+                            </button>
+                            <button id="lv-next" aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 bg-slate-900/60 hover:bg-slate-900/90 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 shadow-lg transition-all z-20">
+                                <i class="fa-solid fa-chevron-right text-sm md:text-base"></i>
+                            </button>
+
+                            <!-- Carousel Indicators -->
+                            <div class="absolute bottom-4 right-4 flex gap-2 z-20" id="lv-indicators">
+                                <button class="w-8 h-2 rounded-full bg-emerald-400 transition-all shadow-sm" aria-label="Slide 1"></button>
+                                <button class="w-3 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all shadow-sm" aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Information Cards & Details -->
+                    <div class="lg:col-span-5 flex flex-col gap-5 scroll-animate delay-100">
+
+                        <!-- Key Features Highlights Grid -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Parcelas Spec -->
+                            <div class="p-5 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-xl hover:border-emerald-400/40 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300 text-xl mb-3">
+                                    <i class="fa-solid fa-vector-square"></i>
+                                </div>
+                                <span class="text-xs text-sky-200 uppercase font-semibold tracking-wider block mb-1">Parcelas</span>
+                                <h4 class="text-2xl font-bold text-white">250 m²</h4>
+                                <p class="text-xs text-sky-100/70 mt-1">Lotes idóneos para vivienda y huerta productiva.</p>
+                            </div>
+
+                            <!-- Area Vivienda Spec -->
+                            <div class="p-5 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-xl hover:border-sky-400/40 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-300 text-xl mb-3">
+                                    <i class="fa-solid fa-house-chimney"></i>
+                                </div>
+                                <span class="text-xs text-sky-200 uppercase font-semibold tracking-wider block mb-1">Área Vivienda</span>
+                                <h4 class="text-2xl font-bold text-white">53 m²</h4>
+                                <p class="text-xs text-sky-100/70 mt-1">Diseño óptimo, funcional y digno para familias.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Description Card -->
+                        <div class="p-6 rounded-3xl bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-2xl border border-white/20 shadow-2xl">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-400/20 border border-amber-300/30 flex items-center justify-center text-amber-300">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Ubicación Estratégica</h3>
+                                    <p class="text-xs text-sky-200">Rimbio, Departamento del Cauca</p>
+                                </div>
+                            </div>
+
+                            <p class="text-sm text-sky-100/90 leading-relaxed mb-6">
+                                El proyecto Loma Verde representa un modelo de desarrollo rural sostenible enfocado en brindar un hogar digno e integrarlo con proyectos productivos locales que promueven la autonomía comunitaria y la paz en el territorio.
+                            </p>
+
+                            <div class="flex flex-wrap items-center gap-3 pt-2 border-t border-white/10">
+                                <a href="#contacto" class="btn-premium bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-sm shadow-lg shadow-emerald-900/30 hover:shadow-emerald-500/40 border-none">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Solicitar Información</span>
+                                </a>
+                                <a href="#proyectos" class="btn-premium bg-white/10 hover:bg-white/20 text-white text-sm border border-white/20">
+                                    <i class="fa-solid fa-folder-open"></i>
+                                    <span>Ver más proyectos</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -797,10 +925,10 @@
                 <span class="text-[10px] font-medium">Inicio</span>
             </a>
 
-            <!-- Left Middle Item: Nosotros -->
-            <a href="#quienes-somos" class="flex flex-col items-center justify-center text-slate-400 hover:text-sky-500 transition-colors duration-300 w-1/4" aria-label="Nosotros">
-                <i class="fa-solid fa-users text-xl mb-1"></i>
-                <span class="text-[10px] font-medium">Nosotros</span>
+            <!-- Left Middle Item: Loma Verde -->
+            <a href="#loma-verde" class="flex flex-col items-center justify-center text-slate-400 hover:text-emerald-500 transition-colors duration-300 w-1/4" aria-label="Loma Verde">
+                <i class="fa-solid fa-tree text-xl mb-1"></i>
+                <span class="text-[10px] font-medium">Loma Verde</span>
             </a>
 
             <!-- Right Middle Item: Proyectos -->
