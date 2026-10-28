@@ -143,6 +143,54 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 
+    // Loma Verde Carousel Logic
+    const lvCarousel = document.getElementById('loma-verde-carousel');
+    const lvPrevBtn = document.getElementById('lv-prev');
+    const lvNextBtn = document.getElementById('lv-next');
+    const lvIndicators = document.querySelectorAll('#lv-indicators button');
+
+    if (lvCarousel && lvPrevBtn && lvNextBtn && lvIndicators.length > 0) {
+        let lvCurrentSlide = 0;
+        const lvSlideCount = lvIndicators.length;
+
+        function updateLvCarousel() {
+            lvCarousel.style.transform = `translateX(-${lvCurrentSlide * 100}%)`;
+
+            // Pause any playing videos when switching slides
+            const videos = lvCarousel.querySelectorAll('video');
+            videos.forEach(v => v.pause());
+
+            lvIndicators.forEach((ind, i) => {
+                if (i === lvCurrentSlide) {
+                    ind.classList.remove('bg-white/40', 'w-3');
+                    ind.classList.remove('hover:bg-white/70');
+                    ind.classList.add('bg-emerald-400', 'w-8');
+                } else {
+                    ind.classList.add('bg-white/40', 'w-3');
+                    ind.classList.add('hover:bg-white/70');
+                    ind.classList.remove('bg-emerald-400', 'w-8');
+                }
+            });
+        }
+
+        lvNextBtn.addEventListener('click', () => {
+            lvCurrentSlide = (lvCurrentSlide + 1) % lvSlideCount;
+            updateLvCarousel();
+        });
+
+        lvPrevBtn.addEventListener('click', () => {
+            lvCurrentSlide = (lvCurrentSlide - 1 + lvSlideCount) % lvSlideCount;
+            updateLvCarousel();
+        });
+
+        lvIndicators.forEach((ind, i) => {
+            ind.addEventListener('click', () => {
+                lvCurrentSlide = i;
+                updateLvCarousel();
+            });
+        });
+    }
+
     // Scroll buttons
     const scrollBtns = document.querySelectorAll('.scroll-btn');
     scrollBtns.forEach(btn => {
@@ -169,6 +217,13 @@ document.addEventListener('DOMContentLoaded', () => {
             image: "https://images.unsplash.com/photo-1593113513832-8456885c3db8?q=80&w=1000&auto=format&fit=crop",
             icon: '<i class="fa-solid fa-hands-holding-child text-blue-400"></i>',
             projects: [
+                {
+                    name: "Proyecto Loma Verde",
+                    type: "Vivienda Rural Productiva",
+                    desc: "Parcelas de 250m² y viviendas de 53m² en Rimbio, Cauca.",
+                    img: "https://asoconstructora.com/wp-content/uploads/2026/10/lomaverde-PM.jpeg",
+                    url: "#loma-verde"
+                },
                 {
                     name: "La Otra Cara de la Moneda",
                     type: "Podcast",
