@@ -336,123 +336,148 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Value Propositions Interactive Pill Carousel
-    const pillsData = [
-        {
-            title: "Conexión",
-            icon: '<i class="fa-solid fa-network-wired"></i>',
-            bg: "from-blue-400 to-blue-500",
-            shadow: "shadow-blue-500/40",
-            blur: "bg-blue-300"
-        },
-        {
-            title: "Calidad",
-            icon: '<i class="fa-solid fa-award"></i>',
-            bg: "from-orange-400 to-red-400",
-            shadow: "shadow-orange-500/40",
-            blur: "bg-orange-300"
-        },
-        {
-            title: "Sostenibilidad",
-            icon: '<i class="fa-solid fa-leaf"></i>',
-            bg: "from-green-400 to-emerald-500",
-            shadow: "shadow-green-500/40",
-            blur: "bg-green-300"
-        },
-        {
-            title: "Flexibilidad",
-            icon: '<i class="fa-solid fa-arrows-spin"></i>',
-            bg: "from-purple-400 to-indigo-500",
-            shadow: "shadow-purple-500/40",
-            blur: "bg-purple-300"
-        },
-        {
-            title: "Inclusión",
-            icon: '<i class="fa-solid fa-users"></i>',
-            bg: "from-yellow-400 to-orange-400",
-            shadow: "shadow-yellow-500/40",
-            blur: "bg-yellow-300"
-        }
-    ];
+    // Propuesta de Valor Desktop Full-Width Panels Interaction
+    const desktopPanels = document.querySelectorAll('.propuesta-panel');
+    if (desktopPanels.length > 0) {
+        desktopPanels.forEach(panel => {
+            panel.addEventListener('mouseenter', () => {
+                desktopPanels.forEach(p => p.classList.remove('active'));
+                panel.classList.add('active');
+            });
+            panel.addEventListener('click', () => {
+                desktopPanels.forEach(p => p.classList.remove('active'));
+                panel.classList.add('active');
+            });
+        });
+    }
 
-    const pillsTrack = document.getElementById('pills-track');
-    const carouselBgGradient = document.getElementById('carousel-bg-gradient');
-    const valueCarouselContainer = document.getElementById('value-carousel-container');
+    // Propuesta de Valor Mobile Collapsible Accordion Logic
+    const accordionItems = document.querySelectorAll('.glass-accordion-item');
+    if (accordionItems.length > 0) {
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.glass-accordion-header');
+            const content = item.querySelector('.glass-accordion-content');
 
-    if (pillsTrack && pillsData.length > 0) {
-        let activeIndex = Math.floor(pillsData.length / 2);
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
 
-        // Render pills
-        function renderPills() {
-            pillsTrack.innerHTML = '';
-
-            pillsData.forEach((pill, index) => {
-                const diff = index - activeIndex;
-                const isCenter = diff === 0;
-
-                // Calculate position, scale and z-index based on distance from center
-                let translateX = diff * 80; // Distance between items
-                let scale = 1 - Math.abs(diff) * 0.2; // Scale down elements further away
-                let zIndex = 10 - Math.abs(diff); // Center on top
-                let opacity = 1 - Math.abs(diff) * 0.3; // Fade out elements further away
-
-                // Limit scale and opacity so they don't disappear completely or get too small
-                if (scale < 0.4) scale = 0.4;
-                if (opacity < 0.1) opacity = 0;
-
-                // If it's too far, hide it
-                if (Math.abs(diff) > 2) {
-                    opacity = 0;
-                    scale = 0;
-                }
-
-                const pillEl = document.createElement('div');
-                pillEl.className = 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-out cursor-pointer flex flex-col items-center gap-4';
-                pillEl.style.transform = `translate(calc(-50% + ${translateX}px), -50%) scale(${scale})`;
-                pillEl.style.zIndex = zIndex;
-                pillEl.style.opacity = opacity;
-
-                // Content of the pill
-                let innerHtml = '';
-
-                if (isCenter) {
-                    // Central Pill (Bigger, text below)
-                    innerHtml = `
-                        <div class="w-32 h-40 rounded-[2.5rem] bg-gradient-to-br ${pill.bg} shadow-2xl ${pill.shadow} flex items-center justify-center text-5xl text-white border border-white/20 transition-all duration-300">
-                            ${pill.icon}
-                        </div>
-                        <span class="font-bold text-slate-800 text-lg absolute -bottom-10 whitespace-nowrap opacity-100 transition-opacity duration-300">${pill.title}</span>
-                    `;
-
-                    // Update background blur
-                    if (carouselBgGradient) {
-                        carouselBgGradient.className = `absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-lg h-[250px] rounded-[100px] blur-3xl opacity-40 transition-colors duration-700 pointer-events-none z-0 ${pill.blur}`;
+                // Close all other accordion items for a clean single-open behavior
+                accordionItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    const otherContent = otherItem.querySelector('.glass-accordion-content');
+                    if (otherContent) {
+                        otherContent.style.maxHeight = null;
+                        otherContent.classList.add('opacity-0');
                     }
-                } else {
-                    // Side Pills (Smaller, circular, no text or hidden text)
-                    innerHtml = `
-                        <div class="w-20 h-20 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-3xl text-slate-400 hover:text-slate-600 transition-colors duration-300">
-                            ${pill.icon}
-                        </div>
-                        <span class="font-bold text-slate-800 text-lg absolute -bottom-10 whitespace-nowrap opacity-0 transition-opacity duration-300">${pill.title}</span>
-                    `;
-                }
-
-                pillEl.innerHTML = innerHtml;
-
-                // Click to focus
-                pillEl.addEventListener('click', () => {
-                    activeIndex = index;
-                    renderPills();
-                    resetAutoPlay();
                 });
 
-                pillsTrack.appendChild(pillEl);
+                if (!isActive) {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.classList.remove('opacity-0');
+                }
+            });
+        });
+    }
+
+    // Functional Live Search for Projects
+    const searchInput = document.getElementById('project-search-input');
+    const searchClear = document.getElementById('project-search-clear');
+    const searchResults = document.getElementById('project-search-results');
+
+    if (searchInput && searchResults) {
+        // Collect all sub-projects from projectData
+        const allProjectsList = [];
+        Object.keys(projectData).forEach(catKey => {
+            const cat = projectData[catKey];
+            cat.projects.forEach(p => {
+                allProjectsList.push({
+                    ...p,
+                    categoryKey: catKey,
+                    categoryTitle: cat.title
+                });
+            });
+        });
+
+        function performSearch(query) {
+            const cleanQuery = query.trim().toLowerCase();
+            if (!cleanQuery) {
+                searchResults.innerHTML = '';
+                searchResults.classList.add('hidden');
+                if (searchClear) searchClear.classList.add('hidden');
+                return;
+            }
+
+            if (searchClear) searchClear.classList.remove('hidden');
+
+            const matches = allProjectsList.filter(p =>
+                p.name.toLowerCase().includes(cleanQuery) ||
+                p.type.toLowerCase().includes(cleanQuery) ||
+                p.desc.toLowerCase().includes(cleanQuery) ||
+                p.categoryTitle.toLowerCase().includes(cleanQuery)
+            );
+
+            if (matches.length === 0) {
+                searchResults.innerHTML = `
+                    <div class="p-4 text-center text-sky-200/70 text-sm">
+                        No se encontraron proyectos que coincidan con "<span class="text-white font-medium">${query}</span>".
+                    </div>
+                `;
+            } else {
+                searchResults.innerHTML = matches.map(proj => `
+                    <div class="search-result-item flex items-center gap-4 p-3.5 hover:bg-white/10 transition-colors cursor-pointer" data-category="${proj.categoryKey}" data-url="${proj.url || ''}">
+                        <img src="${proj.img}" alt="${proj.name}" class="w-12 h-12 rounded-xl object-cover border border-white/20 shrink-0">
+                        <div class="flex-grow min-w-0">
+                            <h5 class="text-white font-semibold text-sm truncate">${proj.name}</h5>
+                            <p class="text-sky-200/70 text-xs truncate">${proj.type} &bull; ${proj.categoryTitle}</p>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sky-300 text-xs shrink-0">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Add click handlers for results
+                searchResults.querySelectorAll('.search-result-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        const catKey = item.getAttribute('data-category');
+                        const projUrl = item.getAttribute('data-url');
+
+                        if (projUrl && projUrl.length > 0) {
+                            window.location.href = projUrl;
+                        } else if (catKey) {
+                            openModal(catKey);
+                        }
+
+                        searchResults.classList.add('hidden');
+                        searchInput.value = '';
+                        if (searchClear) searchClear.classList.add('hidden');
+                    });
+                });
+            }
+
+            searchResults.classList.remove('hidden');
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            performSearch(e.target.value);
+        });
+
+        if (searchClear) {
+            searchClear.addEventListener('click', () => {
+                searchInput.value = '';
+                performSearch('');
+                searchInput.focus();
             });
         }
 
-        // Initial render
-        renderPills();
+        // Close search dropdown on click outside
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.classList.add('hidden');
+            }
+        });
+    }
 
     // 3D Tilt Effect
     const tiltElements = document.querySelectorAll('[data-tilt]');
@@ -482,91 +507,4 @@ document.addEventListener('DOMContentLoaded', () => {
             el.style.transition = 'transform 0.1s ease-out';
         });
     });
-
-        // Touch / Swipe logic
-        let startX = 0;
-        let isDragging = false;
-
-        if(valueCarouselContainer) {
-            valueCarouselContainer.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                isDragging = true;
-            }, {passive: true});
-
-            valueCarouselContainer.addEventListener('touchmove', (e) => {
-                if(!isDragging) return;
-                const currentX = e.touches[0].clientX;
-                const diffX = startX - currentX;
-
-                // Swipe threshold
-                if (Math.abs(diffX) > 50) {
-                    if (diffX > 0 && activeIndex < pillsData.length - 1) {
-                        // Swipe left (next)
-                        activeIndex++;
-                        renderPills();
-                        resetAutoPlay();
-                        isDragging = false; // Require new touch for next swipe
-                    } else if (diffX < 0 && activeIndex > 0) {
-                        // Swipe right (prev)
-                        activeIndex--;
-                        renderPills();
-                        resetAutoPlay();
-                        isDragging = false;
-                    }
-                }
-            }, {passive: true});
-
-            valueCarouselContainer.addEventListener('touchend', () => {
-                isDragging = false;
-            });
-
-            // Mouse drag (for desktop testing)
-            valueCarouselContainer.addEventListener('mousedown', (e) => {
-                startX = e.clientX;
-                isDragging = true;
-            });
-
-            window.addEventListener('mousemove', (e) => {
-                if(!isDragging) return;
-                const currentX = e.clientX;
-                const diffX = startX - currentX;
-
-                if (Math.abs(diffX) > 50) {
-                    if (diffX > 0 && activeIndex < pillsData.length - 1) {
-                        activeIndex++;
-                        renderPills();
-                        resetAutoPlay();
-                        isDragging = false;
-                    } else if (diffX < 0 && activeIndex > 0) {
-                        activeIndex--;
-                        renderPills();
-                        resetAutoPlay();
-                        isDragging = false;
-                    }
-                }
-            });
-
-            window.addEventListener('mouseup', () => {
-                isDragging = false;
-            });
-        }
-
-        // Autoplay
-        let autoPlayInterval;
-
-        function startAutoPlay() {
-            autoPlayInterval = setInterval(() => {
-                activeIndex = (activeIndex + 1) % pillsData.length;
-                renderPills();
-            }, 3000); // Change every 3 seconds
-        }
-
-        function resetAutoPlay() {
-            clearInterval(autoPlayInterval);
-            startAutoPlay();
-        }
-
-        // Start autoplay initially
-        startAutoPlay();
-    }
 });
