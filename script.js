@@ -534,42 +534,76 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Quiénes Conformamos Accordion Logic
-    const conformamosAccordionItems = document.querySelectorAll('.conformamos-accordion-item');
-    if (conformamosAccordionItems.length > 0) {
-        conformamosAccordionItems.forEach(item => {
-            const header = item.querySelector('.conformamos-accordion-header');
-            const content = item.querySelector('.conformamos-accordion-content');
-            const icon = item.querySelector('.accordion-icon');
+    // Quiénes Conformamos Horizontal Card Carousel Logic
+    const conformamosTrack = document.getElementById('conformamos-carousel');
+    const conformamosPrev = document.getElementById('conformamos-prev');
+    const conformamosNext = document.getElementById('conformamos-next');
+    const conformamosIndicators = document.getElementById('conformamos-indicators');
 
-            if (header && content) {
-                header.addEventListener('click', () => {
-                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+    if (conformamosTrack) {
+        const cards = conformamosTrack.children;
+        const totalCards = cards.length;
+        let currentIndex = 0;
 
-                    // Close all other items in this accordion
-                    conformamosAccordionItems.forEach(otherItem => {
-                        const otherContent = otherItem.querySelector('.conformamos-accordion-content');
-                        const otherIcon = otherItem.querySelector('.accordion-icon');
+        function getVisibleCards() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
 
-                        if (otherContent) {
-                            otherContent.style.maxHeight = '0px';
-                            otherContent.classList.add('opacity-0');
-                        }
-                        if (otherIcon) {
-                            otherIcon.style.transform = 'rotate(0deg)';
-                        }
-                    });
+        function getMaxIndex() {
+            return Math.max(0, totalCards - getVisibleCards());
+        }
 
-                    if (!isOpen) {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                        content.classList.remove('opacity-0');
-                        if (icon) {
-                            icon.style.transform = 'rotate(180deg)';
-                        }
-                    }
+        function renderIndicators() {
+            if (!conformamosIndicators) return;
+            conformamosIndicators.innerHTML = '';
+            const maxIdx = getMaxIndex();
+
+            for (let i = 0; i <= maxIdx; i++) {
+                const btn = document.createElement('button');
+                btn.className = `h-2.5 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-8 bg-sky-500' : 'w-2.5 bg-slate-300 hover:bg-slate-400'}`;
+                btn.ariaLabel = `Ir al grupo ${i + 1}`;
+                btn.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateCarousel();
                 });
+                conformamosIndicators.appendChild(btn);
             }
+        }
+
+        function updateCarousel() {
+            const visible = getVisibleCards();
+            const cardWidthPercent = 100 / visible;
+            const maxIdx = getMaxIndex();
+
+            if (currentIndex > maxIdx) currentIndex = maxIdx;
+            if (currentIndex < 0) currentIndex = 0;
+
+            conformamosTrack.style.transform = `translateX(-${currentIndex * cardWidthPercent}%)`;
+            renderIndicators();
+        }
+
+        if (conformamosPrev) {
+            conformamosPrev.addEventListener('click', () => {
+                currentIndex = currentIndex > 0 ? currentIndex - 1 : getMaxIndex();
+                updateCarousel();
+            });
+        }
+
+        if (conformamosNext) {
+            conformamosNext.addEventListener('click', () => {
+                currentIndex = currentIndex < getMaxIndex() ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+        }
+
+        window.addEventListener('resize', () => {
+            updateCarousel();
         });
+
+        // Initialize
+        updateCarousel();
     }
 
     // 3D Tilt Effect
