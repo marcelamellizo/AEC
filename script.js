@@ -276,6 +276,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     type: "Agricultura",
                     desc: "Producción tecnificada y sostenible de diversas variedades de papa.",
                     img: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=600&auto=format&fit=crop"
+                },
+                {
+                    name: "Fabricación Productos para el Hogar",
+                    type: "Emprendimiento Social",
+                    desc: "Fabricación de productos de aseo y del hogar encabezado por madres cabeza de hogar.",
+                    img: "https://images.unsplash.com/photo-1583947215259-38e31be8751f?q=80&w=600&auto=format&fit=crop"
                 }
             ]
         }
