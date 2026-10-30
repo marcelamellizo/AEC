@@ -534,6 +534,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Quiénes Conformamos Accordion Logic
+    const conformamosAccordionItems = document.querySelectorAll('.conformamos-accordion-item');
+    if (conformamosAccordionItems.length > 0) {
+        conformamosAccordionItems.forEach(item => {
+            const header = item.querySelector('.conformamos-accordion-header');
+            const content = item.querySelector('.conformamos-accordion-content');
+            const icon = item.querySelector('.accordion-icon');
+
+            if (header && content) {
+                header.addEventListener('click', () => {
+                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+                    // Close all other items in this accordion
+                    conformamosAccordionItems.forEach(otherItem => {
+                        const otherContent = otherItem.querySelector('.conformamos-accordion-content');
+                        const otherIcon = otherItem.querySelector('.accordion-icon');
+
+                        if (otherContent) {
+                            otherContent.style.maxHeight = '0px';
+                            otherContent.classList.add('opacity-0');
+                        }
+                        if (otherIcon) {
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.classList.remove('opacity-0');
+                        if (icon) {
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    }
+                });
+            }
+        });
+    }
+
     // 3D Tilt Effect
     const tiltElements = document.querySelectorAll('[data-tilt]');
 

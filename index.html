@@ -802,36 +802,81 @@
             <div class="container mx-auto">
                 <div class="text-center mb-16 scroll-animate">
                     <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800 mb-4 tracking-tight">Quiénes <span class="text-gradient-blue">Conformamos</span> AEC</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Somos una asociación diversa y unida por el deseo de construir un mejor país desde los territorios.</p>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Unimos capacidades y voluntades para impulsar el hábitat digno y el desarrollo comunitario integral.</p>
                 </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                    <div class="solid-card-blue p-6 text-center group cursor-pointer">
-                        <div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center text-white mb-4 mx-auto shadow-inner transition-transform group-hover:scale-110">
-                            <i class="fa-solid fa-dove text-2xl group-hover:animate-bounce"></i>
+                <!-- Acordeón de Grupos -->
+                <div class="max-w-3xl mx-auto space-y-4" id="conformamos-accordion">
+                    <!-- Item 1: Familias -->
+                    <div class="conformamos-accordion-item rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden transition-all duration-300">
+                        <button class="conformamos-accordion-header w-full p-6 flex items-center justify-between text-left gap-4 font-bold text-xl text-slate-800 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-house-chimney-user"></i>
+                                </div>
+                                <span>Familias</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down accordion-icon text-sky-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="conformamos-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 opacity-0">
+                            <p class="pb-6 text-slate-600 text-base leading-relaxed">
+                                Núcleos familiares comprometidos con la autogestión y consolidación de viviendas dignas en entornos seguros y sostenibles.
+                            </p>
                         </div>
-                        <h4 class="font-bold text-white text-sm">Firmantes del acuerdo de paz</h4>
                     </div>
 
-                    <div class="solid-card-yellow p-6 text-center group cursor-pointer">
-                        <div class="w-16 h-16 rounded-2xl bg-white/30 backdrop-blur flex items-center justify-center text-slate-800 mb-4 mx-auto shadow-inner transition-transform group-hover:scale-110">
-                            <i class="fa-solid fa-person-walking-luggage text-2xl group-hover:animate-bounce"></i>
+                    <!-- Item 2: Comunidades Rurales -->
+                    <div class="conformamos-accordion-item rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden transition-all duration-300">
+                        <button class="conformamos-accordion-header w-full p-6 flex items-center justify-between text-left gap-4 font-bold text-xl text-slate-800 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-tractor"></i>
+                                </div>
+                                <span>Comunidades Rurales</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down accordion-icon text-amber-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="conformamos-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 opacity-0">
+                            <p class="pb-6 text-slate-600 text-base leading-relaxed">
+                                Poblaciones campesinas y rurales impulsando el desarrollo territorial, la soberanía alimentaria y la conservación ambiental.
+                            </p>
                         </div>
-                        <h4 class="font-bold text-slate-800 text-sm">Desplazados por la violencia</h4>
                     </div>
 
-                    <div class="solid-card-blue p-6 text-center group cursor-pointer">
-                        <div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center text-white mb-4 mx-auto shadow-inner transition-transform group-hover:scale-110">
-                            <i class="fa-solid fa-gavel text-2xl group-hover:animate-bounce"></i>
+                    <!-- Item 3: Emprendedores -->
+                    <div class="conformamos-accordion-item rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden transition-all duration-300">
+                        <button class="conformamos-accordion-header w-full p-6 flex items-center justify-between text-left gap-4 font-bold text-xl text-slate-800 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </div>
+                                <span>Emprendedores</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down accordion-icon text-emerald-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="conformamos-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 opacity-0">
+                            <p class="pb-6 text-slate-600 text-base leading-relaxed">
+                                Personas y colectivos productivos que generan iniciativas sostenibles e innovación social para dinamizar la economía local.
+                            </p>
                         </div>
-                        <h4 class="font-bold text-white text-sm">Comparecientes ante la JEP</h4>
                     </div>
 
-                    <div class="solid-card-yellow p-6 text-center group cursor-pointer">
-                        <div class="w-16 h-16 rounded-2xl bg-white/30 backdrop-blur flex items-center justify-center text-slate-800 mb-4 mx-auto shadow-inner transition-transform group-hover:scale-110">
-                            <i class="fa-solid fa-people-group text-2xl group-hover:animate-bounce"></i>
+                    <!-- Item 4: Asociados de AEC -->
+                    <div class="conformamos-accordion-item rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden transition-all duration-300">
+                        <button class="conformamos-accordion-header w-full p-6 flex items-center justify-between text-left gap-4 font-bold text-xl text-slate-800 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-users text-xl"></i>
+                                </div>
+                                <span>Asociados de AEC</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down accordion-icon text-purple-500 transition-transform duration-300"></i>
+                        </button>
+                        <div class="conformamos-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 opacity-0">
+                            <p class="pb-6 text-slate-600 text-base leading-relaxed">
+                                Miembros activos de la Asociación Enlace Comunitario que lideran, coordinan y articulan proyectos participativos con impacto social.
+                            </p>
                         </div>
-                        <h4 class="font-bold text-slate-800 text-sm">Población de la comunidad</h4>
                     </div>
                 </div>
             </div>
