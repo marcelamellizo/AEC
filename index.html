@@ -822,16 +822,950 @@
 
                     <div class="solid-card-blue p-6 text-center group cursor-pointer">
                         <div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center text-white mb-4 mx-auto shadow-inner transition-transform group-hover:scale-110">
-                            <i class="fa-solid fa-gavel text-2xl group-hover:animate-bounce"></i>
+                       <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEC - Aso Enlace Comunitario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter bg-transparent text-slate-800 overflow-x-hidden antialiased selection:bg-sky-200 selection:text-sky-900">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 glass-header transition-all duration-300" id="header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <img src="https://asoconstructora.com/wp-content/uploads/2026/10/AECLOGO-scaled.webp" alt="AEC Logo" class="h-12 w-auto drop-shadow-sm hover:scale-105 transition-transform duration-300">
+                <span class="text-sm font-bold text-slate-800 whitespace-nowrap">Aso Enlace Comunitario</span>
+            </a>
+            <nav class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#loma-verde" class="hover:text-blue-500 transition-colors">Loma Verde</a>
+                <a href="#quienes-somos" class="hover:text-blue-500 transition-colors">Quiénes Somos</a>
+                <a href="#propuesta" class="hover:text-blue-500 transition-colors">Propuesta de Valor</a>
+                <a href="#proyectos" class="hover:text-blue-500 transition-colors">Proyectos</a>
+                <a href="#conformamos" class="hover:text-blue-500 transition-colors">Comunidad</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Full Background Carousel -->
+            <div class="absolute inset-0 z-0 bg-slate-900 group">
+                <!-- Carousel Slides -->
+                <div id="hero-carousel" class="flex transition-transform duration-700 ease-in-out h-full w-full">
+                    <!-- Slide 1 (Video) -->
+                    <div class="w-full h-full flex-shrink-0 relative">
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                            <source src="https://youtu.be/Jb2stN7kH28?si=D_6XpTVISp-kynrr" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="w-full h-full flex-shrink-0 relative">
+                        <img src="https://asoconstructora.com/wp-content/uploads/2026/10/59a0b4b9-ce1c-46ad-b0e8-b35b1444cfc0.jpg" alt="Comunidad unida" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="w-full h-full flex-shrink-0 relative">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2000&auto=format&fit=crop" alt="Proyectos ambientales" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Dark Overlay for Readability -->
+                <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-black/40"></div>
+                <div class="absolute inset-0 bg-black/10"></div>
+
+                <!-- Carousel Controls -->
+                <button id="carousel-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-white/30 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all shadow-xl border border-white/20 z-20">
+                    <i class="fa-solid fa-chevron-left md:text-xl"></i>
+                </button>
+                <button id="carousel-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-white/30 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all shadow-xl border border-white/20 z-20">
+                    <i class="fa-solid fa-chevron-right md:text-xl"></i>
+                </button>
+
+                <!-- Carousel Indicators -->
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 md:gap-4 z-20" id="carousel-indicators">
+                    <button class="w-10 md:w-16 h-1.5 rounded-full bg-white transition-all shadow-sm"></button>
+                    <button class="w-3 md:w-4 h-1.5 rounded-full bg-white/40 hover:bg-white/60 transition-all shadow-sm"></button>
+                    <button class="w-3 md:w-4 h-1.5 rounded-full bg-white/40 hover:bg-white/60 transition-all shadow-sm"></button>
+                </div>
+            </div>
+
+            <!-- Foreground Content -->
+            <div class="container mx-auto z-10 max-w-7xl w-full px-6 pt-24 pb-32 md:py-32 relative flex flex-col justify-end min-h-screen">
+                <div class="flex flex-col lg:flex-row items-end justify-between gap-12 lg:gap-8 w-full h-full">
+
+                    <!-- Text / Title Side -->
+                    <div class="w-full lg:w-1/2 space-y-6 text-left flex flex-col items-start mb-8 lg:mb-16">
+                        <!-- Dynamic Slide Title will be injected here if we want, but for now static overarching text is better -->
+                        <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-semibold tracking-wider uppercase mb-2">
+                            Transformación Social
                         </div>
-                        <h4 class="font-bold text-white text-sm">Comparecientes ante la JEP</h4>
+                        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tight drop-shadow-lg">
+                            AEC <br>
+                            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300 text-3xl md:text-5xl mt-2 font-medium tracking-normal">Aso Enlace Comunitario</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-blue-50 max-w-lg font-medium opacity-90 drop-shadow-md">
+                            Promoviendo el beneficio social y el bienestar común a través del trabajo comunitario y ambiental.
+                        </p>
+
+                        <div class="pt-6">
+                            <button class="bg-blue-600/90 backdrop-blur-sm text-white hover:bg-blue-500 text-lg scroll-btn px-8 py-4 rounded-full shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all border border-blue-400/30 flex items-center gap-3" data-target="#quienes-somos">
+                                Conoce Más <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Cards Grid (Proyectos & Propuesta de Valor) -->
+                    <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4 md:gap-6 lg:mb-16">
+                        <!-- Proyectos Card -->
+                        <a href="#proyectos" class="group relative overflow-hidden rounded-3xl aspect-square md:aspect-[4/3] shadow-2xl hover:-translate-y-2 transition-all duration-300 block scroll-btn border border-white/10" data-target="#proyectos">
+                            <!-- Background Image -->
+                            <div class="absolute inset-0">
+                                <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <!-- Overlay Glass -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
+                            <!-- Content -->
+                            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                                <div class="w-12 h-12 rounded-2xl bg-blue-500/80 backdrop-blur-md flex items-center justify-center text-white mb-auto shadow-lg border border-white/20">
+                                    <i class="fa-solid fa-folder-open"></i>
+                                </div>
+                                <h4 class="text-white font-bold text-2xl md:text-3xl mb-2 group-hover:text-blue-300 transition-colors">Proyectos</h4>
+                                <p class="text-gray-300 text-sm md:text-base font-medium flex items-center gap-2">Explora iniciativas <i class="fa-solid fa-arrow-right text-xs opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i></p>
+                            </div>
+                        </a>
+
+                        <!-- Propuesta de Valor Card -->
+                        <a href="#propuesta" class="group relative overflow-hidden rounded-3xl aspect-square md:aspect-[4/3] shadow-2xl hover:-translate-y-2 transition-all duration-300 block scroll-btn border border-white/10" data-target="#propuesta">
+                            <!-- Background Image -->
+                            <div class="absolute inset-0">
+                                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            </div>
+                            <!-- Overlay Glass -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
+                            <!-- Content -->
+                            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                                <div class="w-12 h-12 rounded-2xl bg-sky-400/80 backdrop-blur-md flex items-center justify-center text-white mb-auto shadow-lg border border-white/20">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <h4 class="text-white font-bold text-2xl md:text-3xl mb-2 group-hover:text-sky-300 transition-colors">Propuesta<br>de Valor</h4>
+                                <p class="text-gray-300 text-sm md:text-base font-medium flex items-center gap-2">Descubre más <i class="fa-solid fa-arrow-right text-xs opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll down indicator -->
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:block">
+                <a href="#loma-verde" class="scroll-btn opacity-60 hover:opacity-100 transition-opacity flex flex-col items-center gap-2" data-target="#loma-verde">
+                    <span class="text-xs font-semibold tracking-widest uppercase text-white/80">Scroll</span>
+                    <i class="fa-solid fa-chevron-down text-white animate-bounce"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Proyecto Loma Verde Section -->
+        <section id="loma-verde" class="py-20 px-6 relative z-10 bg-gradient-to-b from-slate-900 via-sky-950 to-slate-900 text-white overflow-hidden">
+            <!-- Decorative background elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="container mx-auto max-w-7xl relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-12 scroll-animate">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs md:text-sm font-semibold tracking-wider uppercase mb-3">
+                        <i class="fa-solid fa-tree mr-1.5"></i> Proyecto Destacado
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                        Proyecto <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-400">Loma Verde</span>
+                    </h2>
+                    <p class="text-sky-100/80 max-w-2xl mx-auto text-base md:text-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-location-dot text-rose-400"></i>
+                        <span>Timbio, Cauca &bull; Vivienda Rural Productiva</span>
+                    </p>
+                </div>
+
+                <!-- Main Grid: Carousel & Info Cards -->
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+
+                    <!-- Carousel Container (Media Gallery) -->
+                    <div class="lg:col-span-7 w-full scroll-animate">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-slate-900 group aspect-[16/10] md:aspect-[16/9]">
+                            <!-- Carousel Slides track -->
+                            <div id="loma-verde-carousel" class="flex transition-transform duration-500 ease-in-out h-full w-full">
+
+                                <!-- Slide 1: Image -->
+                                <div class="w-full h-full flex-shrink-0 relative bg-slate-900 flex items-center justify-center">
+                                    <img src="https://asoconstructora.com/wp-content/uploads/2026/10/lomaverde-PM.jpeg" alt="Proyecto Loma Verde - Plan Maestro" class="w-full h-full object-contain md:object-cover">
+                                    <div class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 text-xs font-medium text-white/90 flex items-center gap-2">
+                                        <i class="fa-solid fa-image text-emerald-400"></i> Plan Maestro Loma Verde
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2: Video -->
+                                <div class="w-full h-full flex-shrink-0 relative bg-slate-950 flex items-center justify-center">
+                                    <video controls playsinline class="w-full h-full object-contain">
+                                        <source src="https://asoconstructora.com/wp-content/uploads/2026/10/videoAEC.mp4" type="video/mp4">
+                                        Tu navegador no soporta el reproductor de video.
+                                    </video>
+                                    <div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 text-xs font-medium text-white/90 flex items-center gap-2 pointer-events-none">
+                                        <i class="fa-solid fa-circle-play text-sky-400"></i> Video Recorrido AEC
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Carousel Controls -->
+                            <button id="lv-prev" aria-label="Anterior" class="absolute left-3 top-1/2 -translate-y-1/2 bg-slate-900/60 hover:bg-slate-900/90 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 shadow-lg transition-all z-20">
+                                <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
+                            </button>
+                            <button id="lv-next" aria-label="Siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 bg-slate-900/60 hover:bg-slate-900/90 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center backdrop-blur-md border border-white/20 shadow-lg transition-all z-20">
+                                <i class="fa-solid fa-chevron-right text-sm md:text-base"></i>
+                            </button>
+
+                            <!-- Carousel Indicators -->
+                            <div class="absolute bottom-4 right-4 flex gap-2 z-20" id="lv-indicators">
+                                <button class="w-8 h-2 rounded-full bg-emerald-400 transition-all shadow-sm" aria-label="Slide 1"></button>
+                                <button class="w-3 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all shadow-sm" aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Information Cards & Details -->
+                    <div class="lg:col-span-5 flex flex-col gap-5 scroll-animate delay-100">
+
+                        <!-- Key Features Highlights Grid -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Parcelas Spec -->
+                            <div class="p-5 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-xl hover:border-emerald-400/40 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-300 text-xl mb-3">
+                                    <i class="fa-solid fa-vector-square"></i>
+                                </div>
+                                <span class="text-xs text-sky-200 uppercase font-semibold tracking-wider block mb-1">Parcelas</span>
+                                <h4 class="text-2xl font-bold text-white">250 m²</h4>
+                                <p class="text-xs text-sky-100/70 mt-1">Lotes idóneos para vivienda y huerta productiva.</p>
+                            </div>
+
+                            <!-- Area Vivienda Spec -->
+                            <div class="p-5 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-xl hover:border-sky-400/40 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-300 text-xl mb-3">
+                                    <i class="fa-solid fa-house-chimney"></i>
+                                </div>
+                                <span class="text-xs text-sky-200 uppercase font-semibold tracking-wider block mb-1">Área Vivienda</span>
+                                <h4 class="text-2xl font-bold text-white">53 m²</h4>
+                                <p class="text-xs text-sky-100/70 mt-1">Diseño óptimo, funcional y digno para familias.</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Description Card -->
+                        <div class="p-6 rounded-3xl bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-2xl border border-white/20 shadow-2xl">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-400/20 border border-amber-300/30 flex items-center justify-center text-amber-300">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Ubicación Estratégica</h3>
+                                    <p class="text-xs text-sky-200">Timbio, Departamento del Cauca</p>
+                                </div>
+                            </div>
+
+                            <p class="text-sm text-sky-100/90 leading-relaxed mb-6">
+                                El proyecto Loma Verde representa un modelo de desarrollo rural sostenible enfocado en brindar un hogar digno e integrarlo con proyectos productivos locales que promueven la autonomía comunitaria y la paz en el territorio.
+                            </p>
+
+                            <div class="flex flex-wrap items-center gap-3 pt-2 border-t border-white/10">
+                                <a href="#contacto" class="btn-premium bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-sm shadow-lg shadow-emerald-900/30 hover:shadow-emerald-500/40 border-none">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Solicitar Información</span>
+                                </a>
+                                <a href="#proyectos" class="btn-premium bg-white/10 hover:bg-white/20 text-white text-sm border border-white/20">
+                                    <i class="fa-solid fa-folder-open"></i>
+                                    <span>Ver más proyectos</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+<!-- Quiénes Somos Section -->
+        <section id="quienes-somos" class="py-20 px-6 relative z-10 bg-gradient-to-b from-sky-50 to-white">
+            <div class="container mx-auto">
+                <div class="text-center mb-16 scroll-animate">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800 mb-4 tracking-tight">Quiénes <span class="text-gradient-blue animate-pulse">Somos</span></h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">AEC es una asociación enfocada en el desarrollo integral de las comunidades, impulsando iniciativas que transforman realidades.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="solid-card-yellow p-8 group cursor-pointer">
+                        <div class="w-20 h-20 rounded-2xl bg-white/30 backdrop-blur flex items-center justify-center text-3xl text-slate-800 mb-6 mx-auto shadow-inner transition-all duration-300 transform group-hover:scale-110">
+                            <i class="fa-solid fa-users group-hover:animate-pulse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-slate-800 mb-3">¿Quién es AEC?</h3>
+                        <p class="text-slate-700 text-center text-sm leading-relaxed">AEC es una asociación enfocada en el desarrollo integral de las comunidades, impulsando iniciativas que transforman realidades.</p>
+                    </div>
+
+                    <div class="solid-card-blue p-8 group cursor-pointer">
+                        <div class="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center text-3xl text-white mb-6 mx-auto shadow-inner transition-all duration-300 transform group-hover:scale-110">
+                            <i class="fa-solid fa-bullseye group-hover:animate-pulse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-white mb-3">Misión</h3>
+                        <p class="text-sky-50 text-center text-sm leading-relaxed">Promover el beneficio social y el bienestar común a través del trabajo comunitario, mediante la formulación de proyectos con objeto social, ambiental y restaurativo.</p>
+                    </div>
+
+                    <div class="solid-card-yellow p-8 group cursor-pointer">
+                        <div class="w-20 h-20 rounded-2xl bg-white/30 backdrop-blur flex items-center justify-center text-3xl text-slate-800 mb-6 mx-auto shadow-inner transition-all duration-300 transform group-hover:scale-110">
+                            <i class="fa-solid fa-eye group-hover:animate-pulse" style="--fa-animation-duration: 2s;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-slate-800 mb-3">Visión</h3>
+                        <p class="text-slate-700 text-center text-sm leading-relaxed">Ser el enlace fundamental para la reconstrucción del tejido social, consolidando comunidades sostenibles, empoderadas y resilientes.</p>
+                    </div>
+
+                    <div class="solid-card-blue p-8 group cursor-pointer">
+                        <div class="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center text-3xl text-white mb-6 mx-auto shadow-inner transition-all duration-300 transform group-hover:scale-110">
+                            <i class="fa-solid fa-heart group-hover:animate-pulse" style="--fa-animation-duration: 1.5s;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-white mb-3">Valores</h3>
+                        <p class="text-sky-50 text-center text-sm leading-relaxed">Solidaridad, equidad, respeto por el medio ambiente, inclusión y trabajo en equipo para el desarrollo comunitario.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Propuesta de Valor Section -->
+        <section id="propuesta" class="py-20 px-4 md:px-8 relative overflow-hidden bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 text-white">
+            <!-- Glassmorphism glowing background decorative elements -->
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl h-96 bg-sky-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="container mx-auto relative z-10 max-w-7xl">
+                <!-- Section Header -->
+                <div class="text-center mb-16 scroll-animate">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sky-300 text-xs md:text-sm font-semibold tracking-wider uppercase mb-3">
+                        Pilares Fundamentales
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
+                        Nuestra <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">Propuesta de Valor</span>
+                    </h2>
+                    <p class="text-sky-100/80 max-w-2xl mx-auto text-base md:text-lg">
+                        Brindamos soluciones integrales que impactan positivamente en el entorno social y ambiental de las comunidades.
+                    </p>
+                </div>
+
+                <!-- Desktop Glassmorphism Full Width Cards (Accordion / Dynamic Panels) -->
+                <div class="hidden lg:flex w-full h-[460px] gap-4 mb-16" id="propuesta-desktop-container">
+                    <!-- Panel 1: Conexión -->
+                    <div class="propuesta-panel active group relative rounded-3xl overflow-hidden backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl transition-all duration-500 ease-out cursor-pointer flex-1 flex flex-col justify-between p-8 hover:border-blue-400/50 hover:shadow-blue-500/20" data-panel="0">
+                        <div class="absolute inset-0 bg-gradient-to-b from-blue-600/30 via-transparent to-black/70 pointer-events-none"></div>
+                        <div class="relative z-10 flex items-center justify-between">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-2xl text-white shadow-lg border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <span class="text-4xl font-black text-white/20 group-hover:text-white/40 transition-colors">01</span>
+                        </div>
+                        <div class="relative z-10 mt-auto">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">Conexión</h3>
+                            <p class="panel-desc text-sky-100/90 text-sm md:text-base leading-relaxed opacity-100 transition-opacity duration-300">
+                                Facilitamos la articulación entre comunidades, instituciones y aliados estratégicos para multiplicar el impacto social.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Calidad -->
+                    <div class="propuesta-panel group relative rounded-3xl overflow-hidden backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl transition-all duration-500 ease-out cursor-pointer flex-1 flex flex-col justify-between p-8 hover:border-amber-400/50 hover:shadow-amber-500/20" data-panel="1">
+                        <div class="absolute inset-0 bg-gradient-to-b from-amber-500/30 via-transparent to-black/70 pointer-events-none"></div>
+                        <div class="relative z-10 flex items-center justify-between">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-2xl text-white shadow-lg border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="text-4xl font-black text-white/20 group-hover:text-white/40 transition-colors">02</span>
+                        </div>
+                        <div class="relative z-10 mt-auto">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">Calidad</h3>
+                            <p class="panel-desc text-sky-100/90 text-sm md:text-base leading-relaxed opacity-100 transition-opacity duration-300">
+                                Garantizamos excelencia y rigor en la ejecución de cada proyecto social, ambiental y productivo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Sostenibilidad -->
+                    <div class="propuesta-panel group relative rounded-3xl overflow-hidden backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl transition-all duration-500 ease-out cursor-pointer flex-1 flex flex-col justify-between p-8 hover:border-emerald-400/50 hover:shadow-emerald-500/20" data-panel="2">
+                        <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/30 via-transparent to-black/70 pointer-events-none"></div>
+                        <div class="relative z-10 flex items-center justify-between">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center text-2xl text-white shadow-lg border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <span class="text-4xl font-black text-white/20 group-hover:text-white/40 transition-colors">03</span>
+                        </div>
+                        <div class="relative z-10 mt-auto">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">Sostenibilidad</h3>
+                            <p class="panel-desc text-sky-100/90 text-sm md:text-base leading-relaxed opacity-100 transition-opacity duration-300">
+                                Promovemos iniciativas perdurables en el tiempo que cuidan el medio ambiente y fortalecen la economía local.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Flexibilidad -->
+                    <div class="propuesta-panel group relative rounded-3xl overflow-hidden backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl transition-all duration-500 ease-out cursor-pointer flex-1 flex flex-col justify-between p-8 hover:border-purple-400/50 hover:shadow-purple-500/20" data-panel="3">
+                        <div class="absolute inset-0 bg-gradient-to-b from-purple-500/30 via-transparent to-black/70 pointer-events-none"></div>
+                        <div class="relative z-10 flex items-center justify-between">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-400 to-indigo-600 flex items-center justify-center text-2xl text-white shadow-lg border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-arrows-spin"></i>
+                            </div>
+                            <span class="text-4xl font-black text-white/20 group-hover:text-white/40 transition-colors">04</span>
+                        </div>
+                        <div class="relative z-10 mt-auto">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">Flexibilidad</h3>
+                            <p class="panel-desc text-sky-100/90 text-sm md:text-base leading-relaxed opacity-100 transition-opacity duration-300">
+                                Nos adaptamos a las necesidades cambiantes de los territorios y comunidades vulnerables.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Panel 5: Inclusión -->
+                    <div class="propuesta-panel group relative rounded-3xl overflow-hidden backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl transition-all duration-500 ease-out cursor-pointer flex-1 flex flex-col justify-between p-8 hover:border-pink-400/50 hover:shadow-pink-500/20" data-panel="4">
+                        <div class="absolute inset-0 bg-gradient-to-b from-pink-500/30 via-transparent to-black/70 pointer-events-none"></div>
+                        <div class="relative z-10 flex items-center justify-between">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-400 to-pink-600 flex items-center justify-center text-2xl text-white shadow-lg border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <span class="text-4xl font-black text-white/20 group-hover:text-white/40 transition-colors">05</span>
+                        </div>
+                        <div class="relative z-10 mt-auto">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-pink-300 transition-colors">Inclusión</h3>
+                            <p class="panel-desc text-sky-100/90 text-sm md:text-base leading-relaxed opacity-100 transition-opacity duration-300">
+                                Integramos a todos los actores sociales (firmantes de paz, víctimas y comunidad) construyendo equidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Collapsible Accordion (Glassmorphism) -->
+                <div class="lg:hidden flex flex-col gap-4 mb-12" id="propuesta-mobile-accordion">
+                    <!-- Item 1: Conexión -->
+                    <div class="glass-accordion-item rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20 overflow-hidden transition-all duration-300">
+                        <button class="glass-accordion-header w-full p-5 flex items-center justify-between text-left gap-4 font-bold text-lg text-white">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-xl shadow-md border border-white/20 shrink-0">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                </div>
+                                <span>Conexión</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down accordion-icon text-sky-300 transition-transform duration-300"></i>
+                        </button>
+                        <div class="glass-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 opacity-0">
+                            <p class="pb-5 pt-1 text-sky-100/90 text-sm leading-relaxed border-t border-white/10">
+                                Facilitamos la articulación entre comunidades, instituciones y aliados estratégicos para multiplicar el impacto social.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Calidad -->
+                    <div class="glass-accordion-item rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20 overflow-hidden transition-all duration-300">
+                        <button class="glass-accordion-header w-full p-5 flex items-center justify-between text-left gap-4 font-bold text-lg text-white">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white text-xl shadow-md border border-white/20 shrink-0">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <span>Calidad</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down accordion-icon text-amber-300 transition-transform duration-300"></i>
+                        </button>
+                        <div class="glass-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 opacity-0">
+                            <p class="pb-5 pt-1 text-sky-100/90 text-sm leading-relaxed border-t border-white/10">
+                                Garantizamos excelencia y rigor en la ejecución de cada proyecto social, ambiental y productivo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Sostenibilidad -->
+                    <div class="glass-accordion-item rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20 overflow-hidden transition-all duration-300">
+                        <button class="glass-accordion-header w-full p-5 flex items-center justify-between text-left gap-4 font-bold text-lg text-white">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center text-white text-xl shadow-md border border-white/20 shrink-0">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <span>Sostenibilidad</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down accordion-icon text-emerald-300 transition-transform duration-300"></i>
+                        </button>
+                        <div class="glass-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 opacity-0">
+                            <p class="pb-5 pt-1 text-sky-100/90 text-sm leading-relaxed border-t border-white/10">
+                                Promovemos iniciativas perdurables en el tiempo que cuidan el medio ambiente y fortalecen la economía local.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Flexibilidad -->
+                    <div class="glass-accordion-item rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20 overflow-hidden transition-all duration-300">
+                        <button class="glass-accordion-header w-full p-5 flex items-center justify-between text-left gap-4 font-bold text-lg text-white">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-400 to-indigo-600 flex items-center justify-center text-white text-xl shadow-md border border-white/20 shrink-0">
+                                    <i class="fa-solid fa-arrows-spin"></i>
+                                </div>
+                                <span>Flexibilidad</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down accordion-icon text-purple-300 transition-transform duration-300"></i>
+                        </button>
+                        <div class="glass-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 opacity-0">
+                            <p class="pb-5 pt-1 text-sky-100/90 text-sm leading-relaxed border-t border-white/10">
+                                Nos adaptamos a las necesidades cambiantes de los territorios y comunidades vulnerables.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Inclusión -->
+                    <div class="glass-accordion-item rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20 overflow-hidden transition-all duration-300">
+                        <button class="glass-accordion-header w-full p-5 flex items-center justify-between text-left gap-4 font-bold text-lg text-white">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-400 to-pink-600 flex items-center justify-center text-white text-xl shadow-md border border-white/20 shrink-0">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                                <span>Inclusión</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down accordion-icon text-pink-300 transition-transform duration-300"></i>
+                        </button>
+                        <div class="glass-accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 opacity-0">
+                            <p class="pb-5 pt-1 text-sky-100/90 text-sm leading-relaxed border-t border-white/10">
+                                Integramos a todos los actores sociales (firmantes de paz, víctimas y comunidad) construyendo equidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Functional Live Search for Projects -->
+                <div class="max-w-2xl mx-auto mt-12 relative z-20">
+                    <div class="backdrop-blur-xl bg-white/15 rounded-3xl p-2.5 border border-white/20 shadow-2xl flex items-center gap-3 transition-all duration-300 focus-within:border-sky-400 focus-within:ring-2 focus-within:ring-sky-400/30">
+                        <div class="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center text-sky-300 shrink-0 ml-1">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <input type="text" id="project-search-input" placeholder="Busca un proyecto o iniciativa (ej: Podcast, Café, Papa, Vivienda...)" class="w-full bg-transparent border-none outline-none text-white placeholder:text-sky-200/60 text-sm md:text-base py-2 pr-4">
+                        <button id="project-search-clear" class="hidden text-sky-200/60 hover:text-white p-2 text-sm transition-colors">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <!-- Live Results Dropdown -->
+                    <div id="project-search-results" class="hidden absolute left-0 right-0 top-full mt-3 backdrop-blur-2xl bg-slate-900/95 border border-white/20 rounded-3xl shadow-2xl overflow-hidden z-50 max-h-80 overflow-y-auto divide-y divide-white/10">
+                        <!-- Populated dynamically via script.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qué nos diferencia Section -->
+        <section class="py-20 px-6 relative z-10 bg-gradient-to-br from-yellow-50 to-white overflow-hidden">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-16 scroll-animate">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800 mb-4 tracking-tight">¿Qué nos <span class="text-gradient-blue animate-pulse">Diferencia?</span></h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Nuestro enfoque no es asistencialista, sino transformador. Creamos ecosistemas de desarrollo con la comunidad.</p>
+                </div>
+
+                <div class="relative wrap overflow-hidden p-10 h-full">
+                    <!-- Vertical Line -->
+                    <div class="absolute border-opacity-20 border-sky-400 h-full border-2 left-1/2 -translate-x-1/2 hidden md:block"></div>
+
+                    <!-- Timeline Item 1 -->
+                    <div class="mb-8 flex justify-between items-center w-full md:right-timeline flex-col md:flex-row scroll-animate">
+                        <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                        <div class="z-20 flex items-center order-1 bg-gradient-to-r from-sky-400 to-blue-500 shadow-xl w-12 h-12 rounded-full mb-4 md:mb-0 shrink-0">
+                            <i class="fa-solid fa-handshake-angle mx-auto text-white text-xl animate-pulse"></i>
+                        </div>
+                        <div class="order-1 solid-card-blue rounded-2xl shadow-xl w-full md:w-5/12 px-6 py-5 transform transition-transform hover:scale-105">
+                            <h3 class="font-bold text-white text-xl mb-2">Enfoque Restaurativo</h3>
+                            <p class="text-sm leading-snug tracking-wide text-sky-50">Centramos nuestros esfuerzos en la reconciliación y reparación verdadera dentro de los territorios afectados.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="mb-8 flex justify-between md:flex-row-reverse items-center w-full md:left-timeline flex-col md:flex-row scroll-animate delay-100">
+                        <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                        <div class="z-20 flex items-center order-1 bg-gradient-to-r from-yellow-400 to-orange-500 shadow-xl w-12 h-12 rounded-full mb-4 md:mb-0 shrink-0">
+                            <i class="fa-solid fa-users-rays mx-auto text-white text-xl animate-pulse"></i>
+                        </div>
+                        <div class="order-1 solid-card-blue rounded-2xl shadow-xl w-full md:w-5/12 px-6 py-5 transform transition-transform hover:scale-105">
+                            <h3 class="font-bold text-white text-xl mb-2">Articulación Diversa</h3>
+                            <p class="text-sm leading-snug tracking-wide text-sky-50">Unimos a firmantes de paz, víctimas y comunidad general en un mismo proyecto colaborativo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="mb-8 flex justify-between items-center w-full md:right-timeline flex-col md:flex-row scroll-animate delay-200">
+                        <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                        <div class="z-20 flex items-center order-1 bg-gradient-to-r from-sky-400 to-blue-500 shadow-xl w-12 h-12 rounded-full mb-4 md:mb-0 shrink-0">
+                            <i class="fa-solid fa-seedling mx-auto text-white text-xl animate-pulse"></i>
+                        </div>
+                        <div class="order-1 solid-card-blue rounded-2xl shadow-xl w-full md:w-5/12 px-6 py-5 transform transition-transform hover:scale-105">
+                            <h3 class="font-bold text-white text-xl mb-2">Sostenibilidad a Largo Plazo</h3>
+                            <p class="text-sm leading-snug tracking-wide text-sky-50">Implementamos proyectos económicos viables que garantizan independencia y crecimiento continuo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compromiso Section -->
+        <section id="compromiso" class="py-20 px-6 relative z-10 bg-slate-50">
+            <div class="container mx-auto">
+                <div class="text-center mb-16 scroll-animate">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800 mb-4 tracking-tight">Nuestro <span class="text-gradient-blue">Compromiso</span></h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Trabajamos codo a codo para construir un camino hacia la reparación verdadera y un futuro resiliente.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-12">
+                    <!-- Tarjeta 1 -->
+                    <div class="group h-full p-1 rounded-[24px] bg-gradient-to-br from-sky-400 to-blue-600 hover:shadow-[0_20px_40px_-10px_rgba(14,165,233,0.5)] transition-all duration-300 scroll-animate">
+                        <div class="bg-white rounded-[20px] h-full overflow-hidden flex flex-col relative z-10">
+                            <div class="h-56 overflow-hidden shrink-0 relative">
+                                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1000&auto=format&fit=crop" alt="Trabajo comunitario" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            </div>
+                            <div class="p-8 flex-grow flex flex-col">
+                                <h3 class="text-2xl font-bold mb-4 pr-4"><span class="text-gradient-blue">Nuestro compromiso como asociación</span></h3>
+                                <p class="text-slate-600 leading-relaxed flex-grow">
+                                    Nos comprometemos a acciones especificas de reparación, como restitución, compensación, o trabajo comunitario a través de la asociación sin ánimo de lucro (Aso-Enlace Comunitario).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="group h-full p-1 rounded-[24px] bg-gradient-to-br from-sky-400 to-blue-600 hover:shadow-[0_20px_40px_-10px_rgba(14,165,233,0.5)] transition-all duration-300 scroll-animate delay-100">
+                        <div class="bg-white rounded-[20px] h-full overflow-hidden flex flex-col relative z-10">
+                            <div class="h-56 overflow-hidden shrink-0 relative">
+                                <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=1000&auto=format&fit=crop" alt="Comunidad escuchando" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            </div>
+                            <div class="p-8 flex-grow flex flex-col">
+                                <h3 class="text-2xl font-bold mb-4 pr-4"><span class="text-gradient-blue">Escuchamos sus voces, honramos su verdad</span></h3>
+                                <p class="text-slate-600 leading-relaxed text-sm flex-grow">
+                                    Estamos decididos a trabajar codo a codo con las víctimas y sus familias para construir un camino hacia la reparación verdadera. Este proyecto de Vivienda Rural Productiva no es solo un hogar, sino un símbolo de justicia, reconciliación y esperanza. Sabemos que la sanación empieza con el perdón, y juntos avanzamos hacia una comunidad unida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn-premium btn-blue text-lg hover:shadow-[0_10px_20px_rgba(56,189,248,0.4)] transition-shadow">
+                        Ver Más Detalles <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Section -->
+        <section id="proyectos" class="py-20 px-6 relative bg-gradient-to-br from-white to-sky-50">
+            <div class="container mx-auto relative z-10">
+                <div class="text-center mb-16 scroll-animate">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800 mb-4 tracking-tight">Nuestros <span class="text-gradient-blue animate-pulse">Proyectos</span></h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Impulsamos iniciativas en tres ejes fundamentales para asegurar un desarrollo integral y equitativo.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Proyecto Social -->
+                    <div class="solid-card-blue overflow-hidden group cursor-pointer transition-all duration-300">
+                        <div class="h-56 bg-white/10 flex items-center justify-center relative overflow-hidden backdrop-blur-sm">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                            <i class="fa-solid fa-hands-holding-child text-7xl text-white group-hover:scale-125 transition-transform duration-700"></i>
+                            <h3 class="absolute bottom-5 left-6 text-white text-2xl font-bold">Sociales</h3>
+                            <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-sky-50 mb-6 text-sm leading-relaxed">Iniciativas enfocadas en la reconstrucción del tejido social, educación, cultura y bienestar comunitario para poblaciones vulnerables.</p>
+                            <button class="interactive-btn btn-premium bg-white text-sky-600 w-full hover:bg-sky-50 hover:text-sky-700 transition-colors border-none shadow-none" data-type="social">
+                                Explorar <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto Económico -->
+                    <div class="solid-card-yellow overflow-hidden group cursor-pointer transition-all duration-300">
+                        <div class="h-56 bg-white/20 flex items-center justify-center relative overflow-hidden backdrop-blur-sm">
+                            <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            <i class="fa-solid fa-chart-line text-7xl text-slate-800 group-hover:scale-125 transition-transform duration-700"></i>
+                            <h3 class="absolute bottom-5 left-6 text-slate-800 text-2xl font-bold">Económicos</h3>
+                            <div class="absolute top-4 right-4 w-10 h-10 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center text-slate-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-slate-700 mb-6 text-sm leading-relaxed">Desarrollo de modelos económicos solidarios, cooperativismo y apoyo a emprendimientos que generan ingresos sostenibles.</p>
+                            <button class="interactive-btn btn-premium bg-slate-800 text-white w-full hover:bg-slate-700 hover:text-white transition-colors border-none shadow-none" data-type="economico">
+                                Explorar <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto Productivo -->
+                    <div class="solid-card-blue overflow-hidden group cursor-pointer transition-all duration-300">
+                        <div class="h-56 bg-white/10 flex items-center justify-center relative overflow-hidden backdrop-blur-sm">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                            <i class="fa-solid fa-tractor text-7xl text-white group-hover:scale-125 transition-transform duration-700"></i>
+                            <h3 class="absolute bottom-5 left-6 text-white text-2xl font-bold">Productivos</h3>
+                            <div class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-sky-50 mb-6 text-sm leading-relaxed">Fomento de la agricultura sostenible, seguridad alimentaria y transformación de materias primas con valor agregado local.</p>
+                            <button class="interactive-btn btn-premium bg-white text-sky-600 w-full hover:bg-sky-50 hover:text-sky-700 transition-colors border-none shadow-none" data-type="productivo">
+                                Explorar <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Modal Container -->
+        <div id="projects-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[60] flex justify-center items-end sm:items-center opacity-0 pointer-events-none transition-opacity duration-300 sm:p-4 pb-0">
+            <div class="bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-hidden flex flex-col transform translate-y-full transition-transform duration-300" id="projects-modal-content">
+                <!-- App Handle -->
+                <div class="w-full flex justify-center pt-3 pb-1 absolute top-0 left-0 z-20 sm:hidden">
+                    <div class="w-12 h-1.5 bg-black/10 rounded-full"></div>
+                </div>
+
+                <!-- Modal Header -->
+                <div class="relative pt-12 pb-6 px-6 flex-shrink-0 flex flex-col items-center text-center" id="modal-header-container">
+                    <div id="modal-header-bg" class="absolute inset-0 bg-gradient-to-b from-orange-400/60 to-white z-0 opacity-50"></div>
+
+                    <div id="modal-header-icon" class="relative z-10 w-24 h-24 rounded-[1.5rem] bg-gradient-to-br from-orange-400 to-orange-500 shadow-xl flex items-center justify-center text-5xl text-white mb-4 border border-white/20">
+                        <i class="fa-solid fa-folder"></i>
+                    </div>
+                    <h3 id="modal-title" class="relative z-10 text-xl font-bold text-slate-800 mb-2">Título del Proyecto</h3>
+                    <p id="modal-description" class="relative z-10 text-slate-500 text-sm max-w-sm mx-auto">Descripción de la categoría.</p>
+
+                    <button id="close-modal-btn" class="absolute top-4 right-4 z-20 bg-black/5 hover:bg-black/10 text-slate-500 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="p-6 overflow-y-auto bg-white flex-grow" id="modal-body">
+                    <!-- Sub-projects List -->
+                    <div id="sub-projects-container" class="flex flex-col gap-3">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="p-6 bg-white border-t border-slate-100 flex gap-4 justify-center" id="modal-footer">
+                    <button class="flex-1 py-3 px-4 rounded-full border border-slate-200 text-slate-700 font-semibold hover:bg-slate-50 transition-colors" onclick="document.getElementById('close-modal-btn').click()">Quizás luego</button>
+                    <button class="flex-1 py-3 px-4 rounded-full bg-indigo-500 text-white font-semibold shadow-lg shadow-indigo-200 hover:bg-indigo-600 transition-colors">Ver ahora</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estrategias Section -->
+        <section class="py-20 px-6 relative z-10">
+            <div class="container mx-auto max-w-5xl">
+                <div class="solid-card-yellow p-8 md:p-12">
+                    <div class="text-center mb-10">
+                            <h2 class="text-3xl font-bold text-slate-800 mb-4">Estrategias: <span class="text-gradient-blue">¿Cómo lo lograremos?</span></h2>
+                            <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0 shadow-sm">
+                                <span class="font-bold text-lg">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Articulación Territorial</h4>
+                                <p class="text-slate-600 text-sm">Creación de redes de apoyo entre instituciones públicas, privadas y la comunidad.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 flex-shrink-0 shadow-sm">
+                                <span class="font-bold text-lg">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Formación Integral</h4>
+                                <p class="text-slate-600 text-sm">Capacitación continua en habilidades técnicas, productivas y de resolución de conflictos.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0 shadow-sm">
+                                <span class="font-bold text-lg">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Innovación Social</h4>
+                                <p class="text-slate-600 text-sm">Implementación de metodologías participativas que respondan a las necesidades reales.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 flex-shrink-0 shadow-sm">
+                                <span class="font-bold text-lg">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Acompañamiento Psicosocial</h4>
+                                <p class="text-slate-600 text-sm">Soporte continuo para garantizar el bienestar emocional de los participantes y el éxito de los procesos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiénes Conformamos Section -->
+        <section id="conformamos" class="py-20 px-6 relative z-10 bg-gradient-to-b from-white to-sky-50">
+            <div class="container mx-auto">
+                <div class="text-center mb-16 scroll-animate">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800 mb-4 tracking-tight">Quiénes <span class="text-gradient-blue">Conformamos</span> AEC</h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Somos una asociación diversa y unida por el deseo de construir un mejor país desde los territorios.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <div class="solid-card-blue p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center text-white mb-4 mx-auto shadow-inner transition-transform group-hover:scale-110">
+                            <i class="fa-solid fa-house-user text-2xl group-hover:animate-bounce"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Familias</h4>
                     </div>
 
                     <div class="solid-card-yellow p-6 text-center group cursor-pointer">
                         <div class="w-16 h-16 rounded-2xl bg-white/30 backdrop-blur flex items-center justify-center text-slate-800 mb-4 mx-auto shadow-inner transition-transform group-hover:scale-110">
+                            <i class="fa-solid fa-handshake text-2xl group-hover:animate-bounce"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-base">Asociados</h4>
+                    </div>
+
+                    <div class="solid-card-blue p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center text-white mb-4 mx-auto shadow-inner transition-transform group-hover:scale-110">
                             <i class="fa-solid fa-people-group text-2xl group-hover:animate-bounce"></i>
                         </div>
-                        <h4 class="font-bold text-slate-800 text-sm">Población de la comunidad</h4>
+                        <h4 class="font-bold text-white text-base">Comunidad Rural</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8 px-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600 rounded-full blur-[100px] opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-yellow-600 rounded-full blur-[100px] opacity-20"></div>
+
+        <div class="container mx-auto relative z-10">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="inline-block mb-6 bg-white/10 p-3 rounded-2xl backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all duration-300">
+                        <img src="https://asoconstructora.com/wp-content/uploads/2026/10/AECLOGO-scaled.webp" alt="AEC Logo" class="h-12 w-auto">
+                    </a>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        Aso Enlace Comunitario. Trabajando juntos por un futuro restaurativo, sostenible y en paz.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-400 hover:text-white transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-pink-600 hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Enlaces Rápidos</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#quienes-somos" class="hover:text-yellow-400 transition-colors">Quiénes Somos</a></li>
+                        <li><a href="#propuesta" class="hover:text-yellow-400 transition-colors">Propuesta de Valor</a></li>
+                        <li><a href="#proyectos" class="hover:text-yellow-400 transition-colors">Nuestros Proyectos</a></li>
+                        <li><a href="#conformamos" class="hover:text-yellow-400 transition-colors">La Comunidad</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Proyectos</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Proyectos Sociales</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition-colors">Proyectos Económicos</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition-colors">Proyectos Productivos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contacto</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-blue-400"></i>
+                            <span>Popayán, Carrera 7 #6-41, Centro Comercial Rodrival, 2º Piso</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-blue-400"></i>
+                            <a href="mailto:info@asoenlacecomunitario.com" class="hover:text-white transition-colors">info@asoenlacecomunitario.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-blue-400"></i>
+                            <a href="tel:+573017330609" class="hover:text-white transition-colors">+57 301 733 0609</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">
+                    &copy; 2024 AEC Aso Enlace Comunitario. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-4 text-sm text-slate-500">
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="hover:text-white transition-colors">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Professional Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 z-50 md:hidden w-full bg-white border-t border-slate-200 pb-safe">
+        <div class="flex justify-around items-center h-16 px-4">
+            <!-- Left Item: Inicio -->
+            <a href="#hero" class="flex flex-col items-center justify-center text-sky-500 hover:text-sky-600 transition-colors duration-300 w-1/4" aria-label="Inicio">
+                <i class="fa-solid fa-house text-xl mb-1"></i>
+                <span class="text-[10px] font-medium">Inicio</span>
+            </a>
+
+            <!-- Left Middle Item: Loma Verde -->
+            <a href="#loma-verde" class="flex flex-col items-center justify-center text-slate-400 hover:text-emerald-500 transition-colors duration-300 w-1/4" aria-label="Loma Verde">
+                <i class="fa-solid fa-tree text-xl mb-1"></i>
+                <span class="text-[10px] font-medium">Loma Verde</span>
+            </a>
+
+            <!-- Right Middle Item: Proyectos -->
+            <a href="#proyectos" class="flex flex-col items-center justify-center text-slate-400 hover:text-sky-500 transition-colors duration-300 w-1/4" aria-label="Proyectos">
+                <i class="fa-solid fa-folder-open text-xl mb-1"></i>
+                <span class="text-[10px] font-medium">Proyectos</span>
+            </a>
+
+            <!-- Right Item: Propuesta -->
+            <a href="#propuesta" class="flex flex-col items-center justify-center text-slate-400 hover:text-sky-500 transition-colors duration-300 w-1/4" aria-label="Propuesta de Valor">
+                <i class="fa-solid fa-star text-xl mb-1"></i>
+                <span class="text-[10px] font-medium">Propuesta</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
                     </div>
                 </div>
             </div>
